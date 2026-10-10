@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Muhammed Midlaj K - Unity Game Developer Portfolio. Skilled in Unity 2D, C#, gameplay systems, and UI design. BBA graduate from Calicut University (2023–2026).">
+  <meta name="keywords" content="Muhammed Midlaj, Unity Game Developer, C# Developer, Game Development, Unity 2D, Shark Flappy, Borrowed Time, Calicut University, Kerala">
+  <meta name="author" content="Muhammed Midlaj K">
+  
+  <title>Muhammed Midlaj K | Unity Game Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Particle Canvas -->
+  <canvas id="bgParticlesCanvas" class="bg-particles-canvas"></canvas>
+
+  <!-- Background Ambient Glow & Grid -->
+  <div class="bg-grid-overlay"></div>
+  <div class="bg-glow-orb orb-1"></div>
+  <div class="bg-glow-orb orb-2"></div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">MIDLAJ</span>
+        <span class="highlight">.DEV</span>
+        <span class="logo-bracket">/&gt;</span>
+        <span class="badge-tag">Unity Dev</span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">Summary</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#languages" class="nav-link">Languages</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        
+        <div class="nav-actions">
+          <button class="ui-sound-toggle" id="uiSoundToggle" title="Toggle Sound FX">
+            🔊 SFX: ON
+          </button>
+          <button class="btn btn-outline btn-sm" id="openCvBtn" title="View & Print Resume">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            CV / Resume
+          </button>
+          <a href="https://wa.me/919744525332" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Hire Me</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>MOTIVATED FRESHER • UNITY GAME DEVELOPER • READY TO CONTRIBUTE</span>
+          </div>
+
+          <h1 class="hero-title">
+            MUHAMMED <span class="gradient-text">MIDLAJ.K</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span class="role-badge">UNITY Game Developer</span>
+            <span class="role-sep">•</span>
+            <span class="role-badge">C# Programmer</span>
+          </h2>
+
+          <p class="hero-desc">
+            BBA graduate with a strong interest in <strong>Unity Game Development</strong> and <strong>C# programming</strong>. 
+            Skilled in developing foundational gameplay systems using Unity and C#, with a focus on learning 
+            and building interactive game experiences. Motivated fresher seeking an entry-level Unity Game Developer 
+            opportunity to apply technical skills and contribute to real-world game development.
+          </p>
+
+          <!-- Quick Badges -->
+          <div class="hero-meta-grid">
+            <div class="meta-item">
+              <span class="meta-icon">🎮</span>
+              <div class="meta-data">
+                <span class="meta-label">Primary Engine</span>
+                <span class="meta-value">Unity 2D (Windows)</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">💻</span>
+              <div class="meta-data">
+                <span class="meta-label">Language</span>
+                <span class="meta-value">C# Programming</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🎓</span>
+              <div class="meta-data">
+                <span class="meta-label">Education</span>
+                <span class="meta-value">BBA (Calicut Univ, 2023–2026)</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">📍</span>
+              <div class="meta-data">
+                <span class="meta-label">Location</span>
+                <span class="meta-value">Malappuram, Kerala, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              View Projects
+            </a>
+            <a href="https://wa.me/919744525332" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Chat directly on WhatsApp">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.076-1.127-.063-.268-.087-.614-.207-1.054-.397-1.854-.803-3.055-2.695-3.148-2.819-.092-.123-.751-.998-.751-1.904 0-.906.475-1.353.644-1.537.169-.184.37-.23.493-.23.123 0 .247.001.354.006.113.005.263-.042.41.314.154.372.524 1.28.57 1.373.046.092.077.2.015.323-.062.123-.093.2-.185.308-.092.107-.195.24-.278.323-.092.093-.188.194-.082.378.107.185.477.786 1.025 1.274.707.63 1.303.825 1.488.917.185.093.292.077.4-.046.108-.124.462-.538.585-.723.123-.184.246-.153.415-.092.169.062 1.079.508 1.264.6.185.092.308.138.354.215.046.077.046.446-.098.851z"/></svg>
+              Quick WhatsApp
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-midlaj-084692251" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="Connect on LinkedIn">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Cinematic Developer ID Deck -->
+        <div class="hero-visual">
+          <div class="dev-profile-card">
+            <!-- Header bar -->
+            <div class="dev-card-header">
+              <div class="card-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="card-status-label">DEV PASSPORT // VERIFIED PROFILE</span>
+            </div>
+
+            <!-- Body -->
+            <div class="dev-card-body">
+              <div class="dev-avatar-container">
+                <div class="dev-avatar-frame">
+                  <span class="avatar-icon">🎮</span>
+                </div>
+                <div class="dev-name-plate">
+                  <span class="plate-title">MUHAMMED MIDLAJ.K</span>
+                  <span class="plate-subtitle">UNITY Game Developer</span>
+                </div>
+              </div>
+
+              <!-- Quick Specs -->
+              <div class="dev-specs-grid">
+                <div class="spec-cell">
+                  <span class="spec-label">Game Engine</span>
+                  <span class="spec-val">Unity 2D</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Language</span>
+                  <span class="spec-val">C#</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Proficiency</span>
+                  <span class="spec-val">Game Development</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Education</span>
+                  <span class="spec-val">BBA (2023–2026)</span>
+                </div>
+              </div>
+
+              <!-- Featured Works Mention -->
+              <div class="dev-focus-pills">
+                <span class="focus-pill">🦈 Shark Flappy</span>
+                <span class="focus-pill">⏳ Borrowed Time (UI Lead)</span>
+                <span class="focus-pill">🕹️ Gameplay Systems</span>
+                <span class="focus-pill">💬 English &amp; Malayalam</span>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="dev-card-footer">
+              <div class="footer-live-badge">
+                <span class="live-dot-pulse"></span>
+                <span>OPEN TO ENTRY-LEVEL OPPORTUNITIES</span>
+              </div>
+              <span class="footer-location">📍 Malappuram, Kerala</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUMMARY SECTION -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Profile Overview</span>
+          <h2 class="section-title">Professional Summary</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card primary-story">
+            <div class="story-icon">🚀</div>
+            <h3>Passionate Unity Game Developer</h3>
+            <p>
+              BBA graduate with a strong interest in <strong>Unity Game Development</strong> and <strong>C# programming</strong>. 
+              Skilled in developing foundational gameplay systems using Unity and C#, with a focus on learning 
+              and building interactive game experiences.
+            </p>
+            <p>
+              A motivated and adaptable fresher with good communication skills in <strong>English</strong> and <strong>Malayalam</strong>, 
+              seeking an entry-level opportunity to apply technical skills, gain industry experience, 
+              and grow as a Unity Game Developer.
+            </p>
+            <div class="story-highlights">
+              <span class="highlight-tag">✓ Foundational Gameplay Systems</span>
+              <span class="highlight-tag">✓ Unity 2D &amp; C# Integration</span>
+              <span class="highlight-tag">✓ Game UI Architecture</span>
+              <span class="highlight-tag">✓ Team Collaboration</span>
+            </div>
+          </div>
+
+          <div class="about-card career-focus-card">
+            <div class="story-icon">🎯</div>
+            <h3>Career Objective</h3>
+            <p>
+              Motivated fresher seeking an entry-level Unity Game Developer opportunity to apply programming skills 
+              and contribute to real-world game development with an experienced development team.
+            </p>
+            <div class="contact-quick-list">
+              <div class="quick-contact-item">
+                <span class="qc-label">Email:</span>
+                <span class="qc-val">muhammadmidlaj20109@gmail.com</span>
+              </div>
+              <div class="quick-contact-item">
+                <span class="qc-label">Phone:</span>
+                <span class="qc-val">+91 9744525332</span>
+              </div>
+              <div class="quick-contact-item">
+                <span class="qc-label">Location:</span>
+                <span class="qc-val">Malappuram, Kerala, India</span>
+              </div>
+              <div class="quick-contact-item">
+                <span class="qc-label">LinkedIn:</span>
+                <span class="qc-val">muhammad-midlaj-084692251</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Core technical proficiencies and tooling applied in Unity game projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon engine-icon">🎮</div>
+              <div>
+                <h3>Game Engine</h3>
+                <span class="cat-badge">Core Engine</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li>
+                <span class="skill-name">Unity 2D</span>
+                <span class="skill-tag">Primary Engine</span>
+              </li>
+              <li>
+                <span class="skill-name">Unity Editor Workflows</span>
+                <span class="skill-tag">Scene, Hierarchy, Inspector</span>
+              </li>
+              <li>
+                <span class="skill-name">Component Architecture</span>
+                <span class="skill-tag">GameObjects &amp; Prefabs</span>
+              </li>
+              <li>
+                <span class="skill-name">Windows Game Builds</span>
+                <span class="skill-tag">Deployment &amp; Testing</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon code-icon">💻</div>
+              <div>
+                <h3>Programming</h3>
+                <span class="cat-badge">Languages</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li>
+                <span class="skill-name">C# Programming</span>
+                <span class="skill-tag">Primary Language</span>
+              </li>
+              <li>
+                <span class="skill-name">Object-Oriented Concepts</span>
+                <span class="skill-tag">Classes, Methods, Logic</span>
+              </li>
+              <li>
+                <span class="skill-name">Unity Scripting API</span>
+                <span class="skill-tag">MonoBehaviour, Event Lifecycle</span>
+              </li>
+              <li>
+                <span class="skill-name">Game Flow Architecture</span>
+                <span class="skill-tag">State &amp; Level Navigation</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon gameplay-icon">🕹️</div>
+              <div>
+                <h3>Proficiency</h3>
+                <span class="cat-badge">Game Development</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li>
+                <span class="skill-name">Gameplay Development</span>
+                <span class="skill-tag">Player &amp; Shark Mechanics</span>
+              </li>
+              <li>
+                <span class="skill-name">Environment Design</span>
+                <span class="skill-tag">Underwater Coral, Rocks, Bubbles</span>
+              </li>
+              <li>
+                <span class="skill-name">UI Development &amp; Design</span>
+                <span class="skill-tag">Menus, HUD, Pause, Tutorial</span>
+              </li>
+              <li>
+                <span class="skill-name">Gameplay Info UI</span>
+                <span class="skill-tag">Lives, Keys, Game Status</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="cat-icon tools-icon">🤝</div>
+              <div>
+                <h3>Collaboration &amp; Soft Skills</h3>
+                <span class="cat-badge">Professionalism</span>
+              </div>
+            </div>
+            <ul class="skill-item-list">
+              <li>
+                <span class="skill-name">Team Collaboration</span>
+                <span class="skill-tag">4-Member Team Project Experience</span>
+              </li>
+              <li>
+                <span class="skill-name">Build &amp; UI Integration</span>
+                <span class="skill-tag">Working with Team Leads</span>
+              </li>
+              <li>
+                <span class="skill-name">Adaptability &amp; Learning</span>
+                <span class="skill-tag">Fast Learner &amp; Dedicated</span>
+              </li>
+              <li>
+                <span class="skill-name">Communication</span>
+                <span class="skill-tag">English &amp; Malayalam</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag glow-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Games and interactive systems developed in Unity (Windows), showcasing gameplay programming and UI engineering.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Shark Flappy -->
+          <div class="project-card">
+            <div class="card-media media-gradient-shark">
+              <div class="media-badge">Unity (Windows)</div>
+              <div class="project-icon-large">🦈</div>
+            </div>
+            <div class="card-content">
+              <div class="card-tags">
+                <span>Unity 2D</span>
+                <span>C#</span>
+                <span>Windows</span>
+                <span>Gameplay</span>
+                <span>Environment Design</span>
+              </div>
+              <h3 class="card-title">Shark Flappy</h3>
+              <div class="project-platform-meta">Platform: Unity (Windows)</div>
+              
+              <ul class="project-bullet-list">
+                <li>Developed an underwater shark game environment using Unity, focusing on shark movement and gameplay elements.</li>
+                <li>Created an underwater environment with rocks, coral, plants, bubbles, and other visual elements to provide an immersive game experience.</li>
+              </ul>
+
+              <div class="card-highlights">
+                <span class="feature-tag">🌊 Immersive underwater visual atmosphere</span>
+                <span class="feature-tag">🦈 Responsive shark flight &amp; obstacle navigation</span>
+                <span class="feature-tag">🪨 Custom coral, rock, plant, and bubble hazards</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Borrowed Time -->
+          <div class="project-card">
+            <div class="card-media media-gradient-borrowed">
+              <div class="media-badge">Unity (Windows) • Team Project</div>
+              <div class="project-icon-large">⏳</div>
+            </div>
+            <div class="card-content">
+              <div class="card-tags">
+                <span>Unity 2D</span>
+                <span>C#</span>
+                <span>UI Developer</span>
+                <span>UI Designer</span>
+                <span>Team Project</span>
+              </div>
+              <h3 class="card-title">Borrowed Time</h3>
+              <div class="project-role-badge">Role: UI Developer / UI Designer</div>
+              <p class="project-overview-text">
+                <strong>Borrowed Time</strong> is a 2D platformer developed by a four-member team based on the theme <em>"Everything is Temporary."</em>
+              </p>
+
+              <div class="contribution-header">My Contribution:</div>
+              <ul class="project-bullet-list">
+                <li>Designed and implemented the complete game UI in Unity.</li>
+                <li>Created UI screens for the <strong>Main Menu</strong>, <strong>Tutorial</strong>, <strong>Pause Menu</strong>, <strong>Game Over</strong>, and <strong>Level Completion</strong>.</li>
+                <li>Implemented UI elements for gameplay information such as <strong>lives</strong>, <strong>keys</strong>, and <strong>game status</strong>.</li>
+                <li>Worked with the team to integrate the UI into the overall game flow and ensure consistent navigation between different screens.</li>
+                <li>Collaborated with the team leader and other members to integrate the UI with the final game build.</li>
+              </ul>
+
+              <div class="card-highlights">
+                <span class="feature-tag">🖥️ Complete UI flow from Main Menu to Level Complete</span>
+                <span class="feature-tag">❤️ Real-time HUD tracking lives, keys, and status</span>
+                <span class="feature-tag">👥 Seamless collaboration in a 4-person dev team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="edu-single-wrapper">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-badge">2023 – 2026</div>
+            <h3 class="edu-degree">Bachelor of Business Administration (BBA)</h3>
+            <div class="edu-institution">Calicut University</div>
+            <div class="edu-meta">
+              <span class="location-pill">📍 Kerala, India</span>
+              <span class="status-pill-small">Graduate Class of 2026</span>
+            </div>
+            <p class="edu-desc">
+              Strong foundation in project planning, analytical reasoning, organizational coordination, 
+              and professional management, perfectly complementing hands-on Unity game development with structured thinking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES SECTION -->
+    <section id="languages" class="languages-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Communication</span>
+          <h2 class="section-title">Languages</h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="lang-grid">
+          <div class="lang-card">
+            <div class="lang-header">
+              <span class="lang-name">Malayalam</span>
+              <span class="lang-level">Native</span>
+            </div>
+            <div class="lang-dots">
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+            </div>
+            <span class="lang-desc">Fluent native communication</span>
+          </div>
+
+          <div class="lang-card">
+            <div class="lang-header">
+              <span class="lang-name">English</span>
+              <span class="lang-level">Good Communication</span>
+            </div>
+            <div class="lang-dots">
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+              <span class="dot-filled"></span>
+              <span class="dot-empty"></span>
+            </div>
+            <span class="lang-desc">Professional and technical communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact &amp; Connect</h2>
+          <div class="title-underline"></div>
+          <p class="section-subtitle">
+            Open to entry-level Unity Game Developer opportunities, junior roles, and game development internships.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            <h3 class="panel-heading">Direct Channels</h3>
+            
+            <!-- WhatsApp Link -->
+            <a href="https://wa.me/919744525332" target="_blank" rel="noopener noreferrer" class="info-card whatsapp-card">
+              <div class="info-icon-circle whatsapp-color">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.076-1.127-.063-.268-.087-.614-.207-1.054-.397-1.854-.803-3.055-2.695-3.148-2.819-.092-.123-.751-.998-.751-1.904 0-.906.475-1.353.644-1.537.169-.184.37-.23.493-.23.123 0 .247.001.354.006.113.005.263-.042.41.314.154.372.524 1.28.57 1.373.046.092.077.2.015.323-.062.123-.093.2-.185.308-.092.107-.195.24-.278.323-.092.093-.188.194-.082.378.107.185.477.786 1.025 1.274.707.63 1.303.825 1.488.917.185.093.292.077.4-.046.108-.124.462-.538.585-.723.123-.184.246-.153.415-.092.169.062 1.079.508 1.264.6.185.092.308.138.354.215.046.077.046.446-.098.851z"/></svg>
+              </div>
+              <div class="info-text">
+                <span class="info-title">WhatsApp (Instant Response)</span>
+                <span class="info-val">+91 9744525332</span>
+              </div>
+            </a>
+
+            <!-- Email Card -->
+            <div class="info-card-interactive">
+              <a href="mailto:muhammadmidlaj20109@gmail.com" class="info-card email-card">
+                <div class="info-icon-circle email-color">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-title">Email</span>
+                  <span class="info-val">muhammadmidlaj20109@gmail.com</span>
+                </div>
+              </a>
+              <button class="copy-btn" id="copyEmailBtn" data-copy="muhammadmidlaj20109@gmail.com" title="Copy Email">
+                Copy
+              </button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="info-card-interactive">
+              <a href="tel:+919744525332" class="info-card phone-card">
+                <div class="info-icon-circle phone-color">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-title">Phone</span>
+                  <span class="info-val">+91 9744525332</span>
+                </div>
+              </a>
+              <button class="copy-btn" id="copyPhoneBtn" data-copy="+919744525332" title="Copy Phone">
+                Copy
+              </button>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/muhammad-midlaj-084692251" target="_blank" rel="noopener noreferrer" class="info-card linkedin-card">
+              <div class="info-icon-circle linkedin-color">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </div>
+              <div class="info-text">
+                <span class="info-title">LinkedIn</span>
+                <span class="info-val">linkedin.com/in/muhammad-midlaj-084692251</span>
+              </div>
+            </a>
+
+            <!-- Location Card -->
+            <div class="info-card location-card">
+              <div class="info-icon-circle location-color">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div class="info-text">
+                <span class="info-title">Location</span>
+                <span class="info-val">Malappuram, Kerala, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Message Form -->
+          <div class="contact-form-panel">
+            <h3 class="panel-heading">Send a Direct Message</h3>
+            <form id="contactForm" class="contact-form">
+              <div class="form-group">
+                <label for="userName">Your Name *</label>
+                <input type="text" id="userName" name="name" required placeholder="e.g. John Doe / Studio Recruiter">
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">Your Email *</label>
+                <input type="email" id="userEmail" name="email" required placeholder="e.g. recruiter@gamestudio.com">
+              </div>
+
+              <div class="form-group">
+                <label for="userSubject">Subject *</label>
+                <input type="text" id="userSubject" name="subject" required placeholder="e.g. Unity Developer Role / Project Inquiry">
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Message *</label>
+                <textarea id="userMessage" name="message" rows="5" required placeholder="Hi Muhammed, we reviewed your projects (Shark Flappy & Borrowed Time) and would like to discuss..."></textarea>
+              </div>
+
+              <div class="contact-btn-group">
+                <button type="button" id="sendWhatsAppBtn" class="btn btn-secondary btn-half">
+                  <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.076-1.127-.063-.268-.087-.614-.207-1.054-.397-1.854-.803-3.055-2.695-3.148-2.819-.092-.123-.751-.998-.751-1.904 0-.906.475-1.353.644-1.537.169-.184.37-.23.493-.23.123 0 .247.001.354.006.113.005.263-.042.41.314.154.372.524 1.28.57 1.373.046.092.077.2.015.323-.062.123-.093.2-.185.308-.092.107-.195.24-.278.323-.092.093-.188.194-.082.378.107.185.477.786 1.025 1.274.707.63 1.303.825 1.488.917.185.093.292.077.4-.046.108-.124.462-.538.585-.723.123-.184.246-.153.415-.092.169.062 1.079.508 1.264.6.185.092.308.138.354.215.046.077.046.446-.098.851z"/></svg>
+                  Send via WhatsApp
+                </button>
+                <button type="submit" class="btn btn-glow btn-half">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  Send via Email
+                </button>
+              </div>
+            </form>
+            <div id="formFeedback" class="form-feedback hidden"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">
+          &lt;<span class="highlight">Midlaj.Dev</span> /&gt;
+        </a>
+        <p>Muhammed Midlaj K • UNITY Game Developer • Malappuram, Kerala, India</p>
+      </div>
+      <div class="footer-center">
+        <div class="footer-links">
+          <a href="#about">Summary</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#languages">Languages</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 Muhammed Midlaj K. All rights reserved.</p>
+        <p class="sub-credit">BBA Graduate (Calicut University) • Unity 2D &amp; C# Developer</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PRINTABLE / VIEWABLE CV MODAL (MATCHING EXACT PDF RESUME) -->
+  <div class="modal-backdrop" id="cvModal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog cv-modal-dialog">
+      <div class="cv-modal-header no-print">
+        <h3>Curriculum Vitae Preview (PDF Matched)</h3>
+        <div class="cv-actions">
+          <button class="btn btn-primary btn-sm" onclick="window.print()">
+            🖨️ Print / Save as PDF
+          </button>
+          <button class="modal-close-cv" id="closeCvModalBtn" aria-label="Close CV preview">✕</button>
+        </div>
+      </div>
+      
+      <!-- Authentic Resume Document Matching PDF Exactly -->
+      <div class="cv-paper" id="printableCV">
+        <div class="cv-layout-two-col">
+          <!-- Left Column / Sidebar -->
+          <div class="cv-col-left">
+            <h1 class="cv-name">MUHAMMED<br>MIDLAJ.K</h1>
+            <div class="cv-role-sub">UNITY Game Developer</div>
+
+            <div class="cv-contact-block">
+              <div class="cv-contact-item">
+                <span class="cv-contact-icon">✉️</span>
+                <span>muhammadmidlaj20109@gmail.com</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-contact-icon">📞</span>
+                <span>9744525332</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-contact-icon">📍</span>
+                <span>Malppuram, Kerala, India</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-contact-icon">🇮🇳</span>
+                <span>India</span>
+              </div>
+              <div class="cv-contact-item">
+                <span class="cv-contact-icon">🔗</span>
+                <span>linkedin.com/in/muhammad-midlaj-084692251</span>
+              </div>
+            </div>
+
+            <!-- Summary Block in sidebar -->
+            <div class="cv-sec-block">
+              <h2 class="cv-heading">SUMMARY</h2>
+              <p class="cv-text-justify">
+                BBA graduate with a strong interest in Unity Game Development and C# programming. 
+                Skilled in developing foundational gameplay systems using Unity and C#, with a focus on learning 
+                and building interactive game experiences. A motivated and adaptable fresher with good communication 
+                skills in English and Malayalam, seeking an entry-level opportunity to apply technical skills, 
+                gain industry experience, and grow as a Unity Game Developer. Motivated fresher seeking an entry-level 
+                Unity Game Developer opportunity to apply programming skills and contribute to real-world game development.
+              </p>
+            </div>
+
+            <!-- Education Block in sidebar -->
+            <div class="cv-sec-block">
+              <h2 class="cv-heading">EDUCATION</h2>
+              <div class="cv-edu-entry">
+                <div class="cv-entry-bold">BBA</div>
+                <div class="cv-entry-sub">Calicut University</div>
+                <div class="cv-entry-meta">2023 – 2026 | Kerala, India</div>
+              </div>
+            </div>
+
+            <!-- Skills Block in sidebar -->
+            <div class="cv-sec-block">
+              <h2 class="cv-heading">SKILLS</h2>
+              <div class="cv-skill-item">
+                <div class="cv-skill-cat">Proficiency</div>
+                <div class="cv-skill-val">Game development</div>
+              </div>
+              <div class="cv-skill-item">
+                <div class="cv-skill-cat">Game Engine</div>
+                <div class="cv-skill-val">Unity 2D</div>
+              </div>
+              <div class="cv-skill-item">
+                <div class="cv-skill-cat">Programming</div>
+                <div class="cv-skill-val">C#</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column / Main Body -->
+          <div class="cv-col-right">
+            <!-- Projects Section -->
+            <div class="cv-main-sec">
+              <h2 class="cv-main-heading">PROJECTS</h2>
+
+              <!-- Project 1: Shark Flappy -->
+              <div class="cv-project-entry">
+                <div class="cv-proj-title">Shark Flappy</div>
+                <div class="cv-proj-meta">Unity (Windows)</div>
+                <ul class="cv-bullets">
+                  <li>Developed an underwater shark game environment using Unity, focusing on shark movement and gameplay elements.</li>
+                  <li>Created an underwater environment with rocks, coral, plants, bubbles, and other visual elements to provide an immersive game experience.</li>
+                </ul>
+              </div>
+
+              <!-- Project 2: Borrowed Time -->
+              <div class="cv-project-entry">
+                <div class="cv-proj-title">Borrowed Time</div>
+                <div class="cv-proj-meta">Unity (Windows)</div>
+                <div class="cv-proj-role"><strong>Role:</strong> UI Developer / UI Designer</div>
+                <p class="cv-proj-desc">
+                  Borrowed Time is a 2D platformer developed by a four-member team based on the theme <em>"Everything is Temporary."</em>
+                </p>
+                <div class="cv-contrib-title">My Contribution</div>
+                <ul class="cv-bullets">
+                  <li>Designed and implemented the game UI in Unity.</li>
+                  <li>Created UI screens for the Main Menu, Tutorial, Pause Menu, Game Over, and Level Completion.</li>
+                  <li>Implemented UI elements for gameplay information such as lives, keys, and game status.</li>
+                  <li>Worked with the team to integrate the UI into the overall game flow and ensure consistent navigation between different screens.</li>
+                  <li>Collaborated with the team leader and other members to integrate the UI with the final game build.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="cv-main-sec">
+              <h2 class="cv-main-heading">LANGUAGES</h2>
+              <div class="cv-lang-row">
+                <span class="cv-lang-title">Malayalam</span>
+                <span class="cv-lang-pips">● ● ● ● ●</span>
+              </div>
+              <div class="cv-lang-row">
+                <span class="cv-lang-title">English</span>
+                <span class="cv-lang-pips">● ● ● ● ○</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
